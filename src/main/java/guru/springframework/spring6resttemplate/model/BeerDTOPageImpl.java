@@ -16,9 +16,9 @@ public class BeerDTOPageImpl<BeerDTO> extends PageImpl<guru.springframework.spri
 	private static final long serialVersionUID = 1073736516092057325L;
 
 	@JsonCreator(mode = JsonCreator.Mode.PROPERTIES)
-	public BeerDTOPageImpl(@JsonProperty("content") List<guru.springframework.spring6resttemplate.model.BeerDTO> content, @JsonProperty("number") int page, 
+	public BeerDTOPageImpl(@JsonProperty("content") List<guru.springframework.spring6resttemplate.model.BeerDTO> list, @JsonProperty("number") int page, 
 			@JsonProperty("size") int size, @JsonProperty("totalElements") long total) {
-		super (content, PageRequest.of(page, size), total);
+		super (list, PageRequest.of(page, size), total);
 	}
 
 	public BeerDTOPageImpl(List<guru.springframework.spring6resttemplate.model.BeerDTO> content, Pageable pageable, long total) {
